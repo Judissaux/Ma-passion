@@ -1,0 +1,358 @@
+/*_________________ GENERAL ________________*/
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Dancing+Script:wght@700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(img/BG.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+    
+ 
+}
+
+/*__________________ HEADER__________________*/
+header{
+    
+    height: 100px;
+    background-image: url(img/banniere.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+        
+}
+h1{    
+    text-align: center ;
+    padding-top: 10px;
+    font-family: 'Bungee Spice', cursive;
+    color:white;
+    font-style: italic;
+    
+   
+}
+
+#chatban{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top:25px;
+    right: 10px;
+    
+   
+    }
+
+/*_____________________ NAVBAR________________ */
+
+:root{
+    --hauteur-menu: 60px;
+  }
+  
+nav {
+    
+    width: 100%;
+    font-size: 18px;
+    position: sticky;
+    top: 0;
+ }
+
+  nav > ul {
+    display: flex;
+    text-align: center;
+    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.3);
+    height: var(--hauteur-menu);
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav > ul > li {
+    background-color: rgb(248, 83, 83);
+    position: relative;
+    height: 100%;
+    flex: 1;
+  }
+  
+  nav > ul > li:hover > a{
+    color: #f38d18;
+  }
+  
+  nav > ul > li > a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  li a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .menu-deroulant > a:after{
+    content: '❯';
+    font-size: 15px;
+    margin-left: 7px;
+    display:inline-block;
+    position:fixed;
+  }
+  
+  .menu-deroulant:hover > a:after{
+    animation: rotationFleche 0.2s linear forwards;
+  }
+  
+  @keyframes rotationFleche {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(45deg);
+    }
+    100%{
+      transform: rotate(90deg);
+    }
+  }
+  
+  .sous-menu {
+    margin-top: var(--hauteur-menu);
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    max-height: 0;
+    border-radius: 2px;
+    background-color: white;
+  }
+  
+  .menu-deroulant:hover > .sous-menu {
+    animation: apparitionSousMenu 1s forwards;
+  }
+  
+  @keyframes apparitionSousMenu {
+    0% {
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+      border-top: 3px solid #f38d18;
+    }
+    30% {
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+    100% {
+      max-height: 50em;
+      border-top: 3px solid #f38d18;
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+  }
+  
+  .sous-menu > li:hover {
+    background-color: rgba(33, 105, 236, 0.3);
+  }
+  
+  .sous-menu > li > a {
+    align-items: center;
+    display: flex;
+    height: 50px;
+    width: 100%;
+  }
+  
+  .sous-menu > li:hover > a {
+    color: white;
+  }
+/* ______________ ARTICLE___________ */
+
+.container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+
+h2{
+  color: antiquewhite;
+  text-shadow: 2px -1px 0px rgba(0, 0, 0, 0.8);
+}
+
+section{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+section h2{
+    text-align: center;
+}
+
+#img{
+    width: 300px;
+    height: 250px;
+    align-content: center;
+    border-radius: 30%;
+       
+}
+
+.container div{
+  padding: 20px;
+}
+aside{
+  display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+aside p,.siteStreaming p{
+    background-color: rgb(234 57 57 / 65%);
+    color: white;
+    width: 550px;
+    
+}
+
+aside p a , .siteStreaming p a,.gauche a{
+  font-size:15px;
+  color:black;
+  font-weight: bold;
+
+
+}
+
+aside p a:hover,.siteStreaming p a:hover,.gauche a:hover{
+  background-color: yellow;
+}
+
+/*________________ FOOTER_____________ */
+
+footer p{
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  color: rgb(255, 248, 248);
+  font-size: 1.5rem;
+  background-color: rgb(10, 10, 10);
+  margin-bottom: 0;
+  
+}
+
+.imgGit{
+  height: 30px;
+  width: 30px;
+}
+
+/* _________________PAGE GRADIENT___________ */
+
+#gradient{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#ff1111, #2334f0);    
+
+}
+
+#gradiv{
+  height: 100vh;
+}
+
+/*----------------- PAGE ANIMATION ----------------*/
+
+.animation1{
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+/* -------------PAGE SITE STREAMING -----------------*/
+.siteStreaming img{
+  width: 200px;
+
+}
+
+.siteStreaming{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*------------ PAGE A PROPOS---------------- */
+.contain{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#rond{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: black;
+  margin:auto 0;
+}
+
+.droite,.gauche{
+  text-align: center;
+  background-color: rgb(234 57 57 / 65%);
+  color: white;
+  width: 800px;
+  
+}
+
+.droite{
+  animation: arrivedroite 2s;
+}
+
+.gauche{
+  animation: arrivegauche 2s;
+}
+
+@keyframes arrivedroite {
+  0%{
+    transform: translateX(-1500px);
+    opacity: 0;
+  }
+
+  100%{
+    transform: translateX(0px); 
+    
+  }
+  
+}
+
+@keyframes arrivegauche {
+  0%{
+    transform: translateX(1500px);
+    opacity: 0;
+  }
+
+  100%{
+    transform: translateX(0px);
+    
+  }
+  
+}
+/*------------------RESPONSIVE-----------------------*/
+@media screen and (max-width: 1350px){
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+#img{
+  padding-top: 20px;
+}
+}
+@media screen and (max-width: 800px){
+  .contain p{ 
+    width: 400px; 
+  }
+}
+@media screen and (max-width : 600px){ 
+ 
+  #chatban{
+    display: none;      
+    }
+  aside p, .siteStreaming p{
+    width: 425px;
+  }
+}

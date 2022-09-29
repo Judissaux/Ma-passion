@@ -1,0 +1,10 @@
+/*_________________ GENERAL ________________*/
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(red,blue) no-repeat;
+    
+}
+
