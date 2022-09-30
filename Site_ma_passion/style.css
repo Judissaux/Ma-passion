@@ -8,43 +8,36 @@ body{
     background-image: url(img/BG.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
-    position:relative;
-    
- 
+      
 }
 
 /*__________________ HEADER__________________*/
 header{
-    
-    height: 100px;
-    background-image: url(img/banniere.jpg);
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
+   height: 100px;
+   background-image:url(img/banniere.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  
         
 }
-h1{    
-    text-align: center ;
-    padding-top: 10px;
-    font-family: 'Bungee Spice', cursive;
-    color:white;
-    font-style: italic;
-    
-   
+h1{
+  font-family: 'Bungee Spice';
+  color: antiquewhite;
 }
-
-#chatban{
+.chatban{
     width: 60px;
     height: 60px;
     position: absolute;
-    top:25px;
+    top:20px;
     right: 10px;
-    
-   
+     
     }
-
+  
+  
+  
 /*_____________________ NAVBAR________________ */
 
 :root{
@@ -69,17 +62,19 @@ nav {
   
   nav ul {
     list-style-type: none;
+    padding:0;
   }
   
   nav > ul > li {
-    background-color: rgb(248, 83, 83);
+    background-color: rgba(83, 155, 248, 0.5);
     position: relative;
     height: 100%;
     flex: 1;
+    
   }
   
   nav > ul > li:hover > a{
-    color: #f38d18;
+    color: whitesmoke;
   }
   
   nav > ul > li > a {
@@ -87,11 +82,14 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
   }
   
   li a {
     text-decoration: none;
     color: black;
+    justify-content: center;
+    
   }
   
   .menu-deroulant > a:after{
@@ -128,21 +126,22 @@ nav {
     background-color: white;
   }
   
+  
   .menu-deroulant:hover > .sous-menu {
-    animation: apparitionSousMenu 1s forwards;
+    animation: apparitionSousMenu 4s forwards;
   }
   
   @keyframes apparitionSousMenu {
     0% {
       box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
-      border-top: 3px solid #f38d18;
+      border-top: 3px solid rgba(83, 155, 248, 0.5)
     }
     30% {
       box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
     }
     100% {
       max-height: 50em;
-      border-top: 3px solid #f38d18;
+      border-top: 3px solid rgba(83, 155, 248, 0.5);
       box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
     }
   }
@@ -156,12 +155,16 @@ nav {
     display: flex;
     height: 50px;
     width: 100%;
+    
   }
   
   .sous-menu > li:hover > a {
     color: white;
   }
 /* ______________ ARTICLE___________ */
+#titrePrincipal{
+  font-size: 3em;
+  text-align: center;}
 
 .container{
   display: flex;
@@ -274,6 +277,7 @@ footer p{
 }
 
 /*------------ PAGE A PROPOS---------------- */
+
 .contain{
   width: 100%;
   height: 100vh;
@@ -283,12 +287,20 @@ footer p{
   align-items: center;
 }
 
-#rond{
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: black;
-  margin:auto 0;
+.contain img{
+  margin-bottom: 100px;
+  animation: rotation 4s linear infinite;
+}
+
+@keyframes rotation {
+
+  0%{
+    transform: rotate(360deg);
+    }
+  100%{
+    transform: rotate(0deg);
+  }
+  
 }
 
 .droite,.gauche{
@@ -334,25 +346,88 @@ footer p{
 }
 /*------------------RESPONSIVE-----------------------*/
 @media screen and (max-width: 1350px){
-.container{
-  display: flex;
-  flex-wrap: wrap;
-}
-#img{
-  padding-top: 20px;
-}
-}
-@media screen and (max-width: 800px){
-  .contain p{ 
-    width: 400px; 
+  .container{
+    display: flex;
+    flex-wrap: wrap;
   }
-}
-@media screen and (max-width : 600px){ 
+  #img{
+    padding-top: 20px;
+  }
  
-  #chatban{
-    display: none;      
-    }
-  aside p, .siteStreaming p{
-    width: 425px;
   }
-}
+  @media screen and (max-width: 800px){
+    .contain p{ 
+      width: 400px; 
+    }
+    
+  }
+  @media screen and (max-width : 600px){ 
+   
+    
+    aside p, .siteStreaming p,.contain p{
+      width: 425px;
+    }
+  
+    .chatban{
+     top:20px;
+      right: 30px;
+       
+      }
+  
+  
+  }
+  
+  @media screen and (max-width : 450px){
+    aside p, .siteStreaming p,.contain p{
+      width: 350px;
+    }
+  
+    iframe{
+      width: 400px;
+      height: 250px;
+    }
+  
+  }
+  
+  @media screen and (max-width : 380px){
+    aside p,.siteStreaming p, .contain p{
+      width: 300px;
+    }
+  
+    iframe{
+      width: 300px;
+      height: 250px;
+    }
+  
+    .chatban{
+      display: none;
+    }
+  }
+  
+  
+  
+  @media screen and (max-width : 330px){
+    nav{
+      font-size: 13px;
+    }
+  
+    
+  }
+  
+  @media screen and (max-width : 300px){
+    aside p,.siteStreaming p, .contain p{
+      width: 250px;
+    }
+    iframe{
+      width: 270px;
+      height: 250px;
+    }
+    #img{
+      width: 250px;
+      height: 200px;
+      align-content: center;
+      border-radius: 30%;
+         
+  }
+  }
+
